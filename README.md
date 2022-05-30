@@ -6,7 +6,7 @@ This website is using django backend. All you need to do is to go through https:
 
 
 
-## Steps to follow:
+## Steps to follow :pencil2::
 1. First of all install Django:
 
 ```bash
@@ -41,7 +41,7 @@ python manage.py runserver
 
 
 
-## Roadmap
+## Roadmap :earth_asia:
 - Adding signup login stuff (:heavy_check_mark:)
 - Email Confirmation for registering accounts (:heavy_check_mark:)
 - Adding Models to show events (:x:)
