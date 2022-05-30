@@ -48,7 +48,7 @@ python manage.py runserver
 - Adding Profile page for user (:x:)
 - Adding Sponsor Model (:x:)
 -----------
-<h2> My choice for coding </h2> :stuck_out_tongue:
+## My choice for coding :stuck_out_tongue:
 <p align='center'>
 <img width="200" src="https://github.com/vim/vim/raw/master/runtime/vimlogo.gif" alt="VIM KA LOGO">
 </p>
