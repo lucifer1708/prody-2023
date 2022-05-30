@@ -3,7 +3,7 @@
 </p>
 <h1 align='center'>PRODYOGIKI'23</h1>
 
-This website is using django backend. All you need to do is to go through https://docs.djangoproject.com/ so that you get the basic knowledge that things are working in django.
+This website is using django backend. All you need to do is to go through https://docs.djangoproject.com/ so that you get the basic knowledge that how things are working in django.
 
 
 
