@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load account socialaccount %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% load widget_tweaks %}
+{% block section %}
+<section class="ftco-section" style="height:100vh;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="login-wrap p-0">
+          <h3 class="mb-4 text-center" style="font-size:35px;">Have an Account?</h3>
+          <div class="messages">
+            {% if messages %}
+            <div style="color: white; text-align:center; font-size: 1.2em; margin-top:10px;">
+              {% for message in messages %}
+
+              <div class="alert alert-success shadow-lg">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span> <strong>{{message}}</strong></span>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="errors">
+          {% if form.errors %}
+          {% for field in form %}
+          {% for error in field.errors %}
+          <div class="alert alert-error shadow-lg">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>{{ error|escape }}</span>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+          {% for error in form.non_field_errors %}
+          <div class="alert alert-error shadow-lg">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>{{ error|escape }}</span>
+            </div>
+          </div>
+          {% endfor %}
+          {% endif %}
+        </div>
+        <form action="{% url 'account_login' %}" method="post" class="signin-form">
+          {% csrf_token %}
+
+          <hr>
+
+          <div class="form-group">
+            {{form.login|attr:"class:form-control"|attr:"placeholder:Email"}}
+          </div>
+          <div class="form-group">
+            {{form.password|attr:"class:form-control"|attr:"placeholder:Password"}}
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="form-control btn btn-primary submit px-3">{% trans "Login" %}
+              &raquo;</button>
+          </div>
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+        </form>
+      </div>
+      <div class="w-100 text-center">
+        <a href="{% url 'account_reset_password' %}" style="color: #fff">Forgot Password</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+{% endblock %}
