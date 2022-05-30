@@ -1,5 +1,5 @@
 <p align='center'>
-<img width="200" src="static/images/prody1.png" alt="Material Bread logo">
+<img width="200" src="static/images/pg.svg" alt="PRODY KA LOGO">
 </p>
 <h1 align='center'>PRODYOGIKI'23</h1>
 
