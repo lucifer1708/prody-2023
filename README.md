@@ -44,9 +44,9 @@ python manage.py runserver
 ## Roadmap
 - Adding signup login stuff (**DONE**:heavy_check_mark:)
 - Email Confirmation for registering accounts (**DONE**:heavy_check_mark:)
-- Adding Models to show events (**PENDING**:negative_squared_cross_mark:)
-- Adding Profile page for user (**PENDING**:negative_squared_cross_mark:)
-- Adding Sponsor Model (**PENDING**:negative_squared_cross_mark:)
+- Adding Models to show events (**PENDING**:x:)
+- Adding Profile page for user (**PENDING**:x:)
+- Adding Sponsor Model (**PENDING**:x:)
 -----------
 <h2> My choice for coding </h2>
 <p align='center'>
