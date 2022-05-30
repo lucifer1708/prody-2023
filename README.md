@@ -1,8 +1,8 @@
 <p align='center'>
 <img width="200" src="static/images/prody1.png" alt="Material Bread logo">
-
 </p>
-# PRODYOGIKI'23
+<h1 align='center'>PRODYOGIKI'23</h1>
+
 This website is using django backend. All you need to do is to go through https://docs.djangoproject.com/ so that you get the basic knowledge that things are working in django.
 
 
