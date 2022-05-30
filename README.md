@@ -47,6 +47,7 @@ python manage.py runserver
 - Adding Models to show events (**PENDING**)
 - Adding Profile page for user (**PENDING**)
 - Adding Sponsor Model (**PENDING**)
+-----------
 <h2> My choice for coding </h2>
 <p align='center'>
 <img width="200" src="https://github.com/vim/vim/raw/master/runtime/vimlogo.gif" alt="VIM KA LOGO">
