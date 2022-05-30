@@ -42,11 +42,11 @@ python manage.py runserver
 
 
 ## Roadmap
-- Adding signup login stuff (**DONE**)
-- Email Confirmation for registering accounts (**DONE**)
-- Adding Models to show events (**PENDING**)
-- Adding Profile page for user (**PENDING**)
-- Adding Sponsor Model (**PENDING**)
+- [x] Adding signup login stuff (**DONE**)
+- [x] Email Confirmation for registering accounts (**DONE**)
+- [] Adding Models to show events (**PENDING**)
+- [] Adding Profile page for user (**PENDING**)
+- [] Adding Sponsor Model (**PENDING**)
 -----------
 <h2> My choice for coding </h2>
 <p align='center'>
