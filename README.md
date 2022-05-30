@@ -1,4 +1,4 @@
-![Logo](static/images/prody1.pg)
+![Logo](static/images/prody1.svg)
 
 # PRODYOGIKI'23
 This website is using django backend. All you need to do is to go through https://docs.djangoproject.com/ so that you get the basic knowledge that things are working in django.
