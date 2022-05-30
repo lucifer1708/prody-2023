@@ -17,20 +17,20 @@ This website is using django backend. All you need to do is to go through https:
 ```bash
 git clone https://github.com/lucifer1708/prody-2023.git
 ```
-3. change the directory to prody-2023 using:
+3. Change the directory to prody-2023 using:
 ```bash
 cd prody-2023
 ```
-4. create a virtual environment:
+4. Create a virtual environment:
 ```bash
 pip install virtualenv
 virtualenv env
 ```
-5. activate the virtual environment
+5. Activate the virtual environment
 ```bash
 source venv/bin/activate
 ```
-6. now install all the packages which are being used in this project:
+6. Now install all the packages which are being used in this project:
 ```bash
 pip install -r requirements.txt
 ```
