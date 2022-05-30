@@ -24,7 +24,7 @@ cd prody-2023
 4. Create a virtual environment:
 ```bash
 pip install virtualenv
-virtualenv env
+virtualenv venv
 ```
 5. Activate the virtual environment
 ```bash
