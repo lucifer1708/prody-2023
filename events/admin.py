@@ -1,6 +1,12 @@
 from django.contrib import admin
-from .models import Post as post
+from .models import EventCard
 
 
 # Register your models here.
-admin.site.register(post)
+
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('title', 'desc')
+    search_fields = ['title', 'desc']
+
+
+admin.site.register(EventCard, EventAdmin)

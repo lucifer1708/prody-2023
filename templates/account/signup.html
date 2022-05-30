@@ -72,7 +72,10 @@ Signup
           <hr>
 
           <div class="form-group">
-            {{form.name|attr:"class:form-control"|attr:"placeholder:Your Name"}}
+            {{form.first_name|attr:"class:form-control"|attr:"placeholder:First Name"}}
+          </div>
+          <div class="form-group">
+            {{form.last_name|attr:"class:form-control"|attr:"placeholder:Last Name"}}
           </div>
           <div class="form-group">
             {{form.phone_number|attr:"class:form-control"|attr:"placeholder:Phone Number"}}

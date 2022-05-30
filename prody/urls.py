@@ -18,6 +18,8 @@ from django.urls import path, include, re_path
 # from django.views.generic.base import TemplateView
 from users import views as user_views
 from allauth.account.views import confirm_email
+from django.conf.urls.static import static
+from django.conf import settings
 # from allauth.account.views import LoginView, SignupView
 
 urlpatterns = [
@@ -26,4 +28,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     re_path(r'^rest-auth/registration/account-confirm-email/(?P<key>[-:\w]+)/$', confirm_email,
             name='account_confirm_email'),
-]
+    path('events/', include('events.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
