@@ -15,9 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Author: Sumit Dhiman
-# Email: sd08012003@gmail.com
-# Github: /lucifer1708/
+# Author: ISTE NITH
+# Email: iste@nith.ac.in
+# Github: /istenith/
 
 
 import os
@@ -208,12 +208,14 @@ JAZZMIN_SETTINGS = {
     "welcome_sign": "Welcome to the admin panel of Prody",
     # Copyright on the footer
     "copyright": "ISTE-NITH",
-    "changeform_format": "vertical_tabs",
+    "changeform_format": "horizontal_tabs",
     "site_logo": "images/prody1.png",
-    "site_logo_classes": "None",
-
-
-
+    "site_logo_classes": "img-circle",
+    "topmenu_links": [
+        {"name": "Home", "url": "/", "new_window": True},
+        {"name": "Events", "url": "/events", "new_window": True},
+    ],
+    "search_model": "auth.User",
 }
 
 

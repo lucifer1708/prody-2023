@@ -91,7 +91,7 @@
 
             {% if jazzmin_settings.search_model %}
                 <form action="{{ jazzmin_settings.search_url }}" method="GET" class="form-inline ml-3">
-                    <div class="input-group input-group-sm">
+                    <div class="input-group input-group-sm" style="width: 235px; position:absolute; right:50px">
                         <input class="form-control form-control-navbar" name="q" type="search" placeholder="{% trans 'Search' %} {{ jazzmin_settings.search_name }}..." aria-label="{% trans 'Search' %} {{ jazzmin_settings.search_name }}...">
                         <div class="input-group-append">
                             <button class="btn btn-navbar" type="submit">
@@ -323,7 +323,7 @@
     {% if not is_popup %}
         <footer class="main-footer {{ jazzmin_ui.footer_classes }}">
             <div class="float-right d-none d-sm-inline">
-                <b>{% trans "PRODYOKI'23" %}</b>             </div>
+                <b>{% trans "PRODYOGIKI'23" %}</b>             </div>
             {% autoescape off %}
                 <strong>{% trans 'Copyright' %} &copy; {% now 'Y' %} {{ jazzmin_settings.copyright }}.</strong> {% trans 'All rights reserved.' %}
             {% endautoescape %}
