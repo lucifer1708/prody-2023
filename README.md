@@ -44,7 +44,8 @@ python manage.py runserver
 ## Roadmap :earth_asia:
 - Adding signup login stuff (:heavy_check_mark:)
 - Email Confirmation for registering accounts (:heavy_check_mark:)
-- Adding Models to show events (:x:)
+- Adding Models to show events (:heavy_check_mark:)
+- Adding Models to register events (:x:)
 - Adding Profile page for user (:heavy_check_mark:)
 - Adding Sponsor Model (:x:)
 -----------
