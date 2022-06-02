@@ -1,33 +1,39 @@
 from django.shortcuts import render
-from allauth.account.views import PasswordResetView
-from django.conf import settings
-from django.db import models
-from django.dispatch import receiver
-from django.http import HttpRequest
-from django.middleware.csrf import get_token
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from django.utils.decorators import method_decorator
+from django.views import View
+from .forms import ProfileForm, form_validation_error
+from .models import Profile
 
 
-# @receiver(models.signals.post_save, sender=settings.AUTH_USER_MODEL)
-# def send_reset_password_email(sender, instance, created, **kwargs):
+@method_decorator(login_required(login_url='account_login'), name='dispatch')
+class ProfileView(View):
+    profile = None
 
-#     if created:
+    def dispatch(self, request, *args, **kwargs):
+        self.profile, __ = Profile.objects.get_or_create(user=request.user)
+        return super(ProfileView, self).dispatch(request, *args, **kwargs)
 
-#         # First create a post request to pass to the view
-#         request = HttpRequest()
-#         request.method = 'POST'
+    def get(self, request):
+        context = {'profile': self.profile, 'segment': 'profile'}
+        return render(request, 'users/profile.html', context)
 
-#         # add the absolute url to be be included in email
-#         if settings.DEBUG:
-#             request.META['HTTP_HOST'] = '127.0.0.1:8000'
-#         else:
-#             request.META['HTTP_HOST'] = 'www.mysite.com'
+    def post(self, request):
+        form = ProfileForm(request.POST, request.FILES, instance=self.profile)
 
-#         # pass the post form data
-#         request.POST = {
-#             'email': instance.email,
-#             'csrfmiddlewaretoken': get_token(HttpRequest())
-#         }
-#         PasswordResetView.as_view()(request)  # email will be sent!
+        if form.is_valid():
+            profile = form.save()
+            profile.user.first_name = form.cleaned_data.get('first_name')
+            profile.user.last_name = form.cleaned_data.get('last_name')
+            profile.user.email = form.cleaned_data.get('email')
+            profile.user.save()
+
+            messages.success(request, 'Profile saved successfully')
+        else:
+            messages.error(request, form_validation_error(form))
+        return redirect('profile')
 
 
 def home(request):
