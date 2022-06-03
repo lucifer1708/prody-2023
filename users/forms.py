@@ -1,5 +1,5 @@
 from .models import Profile
-from allauth.account.forms import SignupForm, LoginForm
+from allauth.account.forms import SignupForm
 from django import forms
 
 

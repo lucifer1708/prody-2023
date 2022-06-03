@@ -123,7 +123,6 @@ ACCOUNT_FORMS = {
     'set_password': 'allauth.account.forms.SetPasswordForm',
     'reset_password': 'allauth.account.forms.ResetPasswordForm',
     'reset_password_from_key': 'allauth.account.forms.ResetPasswordKeyForm',
-    'disconnect': 'allauth.socialaccount.forms.DisconnectForm',
 }
 
 WSGI_APPLICATION = 'prody.wsgi.application'
