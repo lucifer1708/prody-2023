@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import EventCard
+from .models import EventCard, Sponsors
 
 
 # Register your models here.
@@ -10,3 +10,4 @@ class EventAdmin(admin.ModelAdmin):
 
 
 admin.site.register(EventCard, EventAdmin)
+admin.site.register(Sponsors)

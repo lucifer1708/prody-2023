@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <title>Sponsors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Festival">
+  <meta name="description" content="Festival">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/sponsor.css' %}">
+  <link rel="stylesheet" type="" href="<!-- CSS only -->
+<link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <style>
+    .stack {
+      display: grid;
+      column-gap: 2em;
+      row-gap: 2em;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card {
+      display: grid;
+      grid-template-rows: 20em 4em 8em 5em;
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      height: 100%;
+      background-color: #F9F7F4;
+      border-radius: 5px;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.6);
+    }
+
+    img {
+      max-height: 20em;
+    }
+
+    .name {
+      text-align: center;
+      padding-top: 1em;
+      font-size: 1.5em;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      color: #BD5227;
+    }
+
+    .description {
+      padding: 1em;
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      color: #555555;
+    }
+
+    .sponsor {
+      padding-top: 1em;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.5em;
+      font-weight: lighter;
+      color: white;
+      background-color: #BD5126;
+      transition: .25s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+    @media only screen and (max-width: 1024px) {
+      img {
+        max-height: 15rem;
+      }
+
+      .card {
+        display: grid;
+        grid-template-rows: 15em 4em 8em 5em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 style="text-align: center; font-weight:bolder; margin-bottom: 30px;">SPONSORS</h1>
+  <div class="stack">
+    {% for sponsor in sponsors_list %}
+    <div id="card-1" class="card">
+      <img src="{{sponsor.image.url}}" width="100%">
+      <div class="name">
+      </div>
+      <div class="description">{{sponsor.title}}</div>
+      <div class="sponsor">{{sponsor.subtitle}}</div>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
