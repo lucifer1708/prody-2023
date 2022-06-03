@@ -47,7 +47,7 @@ python manage.py runserver
 - Adding Models to show events (:heavy_check_mark:)
 - Adding Models to register events (:x:)
 - Adding Profile page for user (:heavy_check_mark:)
-- Adding Sponsor Model (:x:)
+- Adding Sponsor Model (:heavy_check_mark:)
 -----------
 ## My choice for coding :stuck_out_tongue:
 <p align='center'>
