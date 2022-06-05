@@ -8,6 +8,24 @@ Home
   <h3>Welcome {{ user.username }}!</h3>
   <a href="{% url 'account_logout' %}">Logout?</a>
 </div>
+  <div class="ftco-section" style="height:100vh;">
+  <div class="hero" style="align-self:center; margin-top:10em;">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold" style=" font-size: 35px; color: white;">Welcome!</h1>
+        <br>
+        <p class="py-9" style="font-size: 20px; margin-bottom: 10px; color: white;"></p>
+        <br>
+        <a href="{% url 'profile' %}"><button class="btn btn-primary">Profile</button>
+          <div class="space" style="  width: 4px;
+  height: auto;
+  display: inline-block;"></div>
+          <a href="{% url 'event_page' %}"><button class="btn btn-primary">Events</button>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
 {% else %}
 <div class="ftco-section" style="height:100vh;">
   <div class="hero" style="align-self:center; margin-top:10em;">

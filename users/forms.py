@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from .models import Profile
 from allauth.account.forms import SignupForm
 from django import forms
@@ -5,8 +6,13 @@ from django import forms
 
 class CustomSignupForm(SignupForm):
     first_name = forms.CharField(max_length=30, label='First Name')
-    last_name = forms.CharField(max_length=30, label='First Name')
+    last_name = forms.CharField(max_length=30, label='Last Name')
     phone_number = forms.CharField(max_length=12, label='Phone Number')
+
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'phone_number',
+                  'email', 'password1', 'password2')
 
     def save(self, request):
         user = super(CustomSignupForm, self).save(request)

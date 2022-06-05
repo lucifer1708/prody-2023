@@ -215,6 +215,7 @@ figure {
 }
 
 img {
+  background-image: url("../images/bg.jpg");
   vertical-align: middle;
   border-style: none;
 }

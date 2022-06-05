@@ -3,15 +3,14 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.conf import settings
 from django.templatetags.static import static
-
-# Create your models here.
+from django.contrib.auth.models import AbstractUser
 
 
 class ExtendedUser(models.Model):
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
-    phone_number = models.IntegerField(blank=True)
+    phone_number = models.CharField(max_length=13, blank=True)
 
 
 class Profile(models.Model):
@@ -31,7 +30,7 @@ class Profile(models.Model):
     birthday = models.DateField(null=True, blank=True)
     gender = models.PositiveSmallIntegerField(
         choices=GENDER_CHOICES, null=True, blank=True)
-    phone = models.CharField(max_length=32, null=True, blank=True)
+    phone_number = models.CharField(null=True, max_length=13, blank=True)
     address = models.CharField(max_length=255, null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
