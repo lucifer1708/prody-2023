@@ -13,6 +13,4 @@ urlpatterns = [
             name='account_confirm_email'),
     path('events/', include('events.urls')),
     path('sponsors/', user_views.SponsorsList.as_view(), name='sponsors'),
-]
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

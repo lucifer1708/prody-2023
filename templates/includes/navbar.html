@@ -1,0 +1,80 @@
+{% load static %}
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <!-- Navbar Logo -->
+    <div class="logo">
+      <!-- Logo Placeholder for Inlustration -->
+      <a href="{% url 'home' %}"><i class="fa fa-angellist"></i> Logo</a>
+    </div>
+
+    <!-- Navbar Links -->
+
+    {% if user.is_authenticated %}
+    <ul id="menu">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <!--
+   -->
+      <li><a href="{% url 'events:event_page' %}">Events</a></li>
+      <!--
+   -->
+      <li><a href="{% url 'sponsors' %}">Sponsors</a></li>
+      <li><a href="{% url 'profile' %}">Profile</a></li>
+      <!--
+   -->
+      <li><a href="{% url 'account_logout' %}">Logout</a></li>
+    </ul>
+    {% else %}
+    <ul id="menu">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <!--
+   -->
+      <li><a href="{% url 'events:event_page' %}">Events</a></li>
+      <!--
+   -->
+      <li><a href="{% url 'sponsors' %}">Sponsors</a></li>
+      <li><a href="{% url 'account_login' %}">Login</a></li>
+      <!--
+   -->
+      <li><a href="{% url 'account_signup' %}">Signup</a></li>
+    </ul>
+    {% endif %}
+  </div>
+</nav>
+
+<!-- Menu Icon -->
+<div class="menuIcon">
+  <span class="icon icon-bars"></span>
+  <span class="icon icon-bars overlay"></span>
+</div>
+
+<div class="overlay-menu">
+  {% if user.is_authenticated %}
+  <ul id="menu">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <!--
+   -->
+    <li><a href="{% url 'events:event_page' %}">Events</a></li>
+    <!--
+   -->
+    <li><a href="{% url 'sponsors' %}">Sponsors</a></li>
+    <li><a href="{% url 'profile' %}">Profile</a></li>
+    <!--
+   -->
+    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+  </ul>
+  {% else %}
+  <ul id="menu">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <!--
+   -->
+    <li><a href="{% url 'events:event_page' %}">Events</a></li>
+    <!--
+   -->
+    <li><a href="{% url 'sponsors' %}">Sponsors</a></li>
+    <li><a href="{% url 'account_login' %}">Login</a></li>
+    <!--
+   -->
+    <li><a href="{% url 'account_signup' %}">Signup</a></li>
+  </ul>
+  {% endif %}
+</div>

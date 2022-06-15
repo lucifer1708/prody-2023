@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -18,7 +17,7 @@ class ProfileView(View):
 
     def get(self, request):
         context = {'profile': self.profile, 'segment': 'profile'}
-        return render(request, 'users/profile.html', context)
+        return render(request, 'users/profile-edit.html', context)
 
     def post(self, request):
         form = ProfileForm(request.POST, request.FILES, instance=self.profile)
