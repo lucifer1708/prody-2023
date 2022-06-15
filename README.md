@@ -54,9 +54,10 @@ python manage.py runserver
 - Adding signup login stuff (:heavy_check_mark:)
 - Email Confirmation for registering accounts (:heavy_check_mark:)
 - Adding Models to show events (:heavy_check_mark:)
-- Adding Models to register events (:x:)
+- Adding Models to register events (:heavy_check_mark:)
 - Adding Profile page for user (:heavy_check_mark:)
 - Adding Sponsor Model (:heavy_check_mark:)
+- Adding Other Features(:x:)
 
 ## My choice for coding :stuck_out_tongue:
 
