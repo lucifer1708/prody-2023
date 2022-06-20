@@ -27,7 +27,7 @@ class Profile(models.Model):
         User, related_name="profile", on_delete=models.CASCADE)
     avatar = models.ImageField(
         upload_to="participants/profiles/avatars/", null=True, blank=True)
-    birthday = models.DateField(null=True, blank=True)
+    birthday = models.CharField(null=True, max_length=12, blank=True)
     gender = models.PositiveSmallIntegerField(
         choices=GENDER_CHOICES, null=True, blank=True)
     phone_number = models.CharField(null=True, max_length=13, blank=True)
