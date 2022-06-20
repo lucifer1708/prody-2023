@@ -1,16 +1,7 @@
 from django.utils.translation import gettext as _
 from django.contrib.auth.models import User
 from django.db import models
-from django.conf import settings
 from django.templatetags.static import static
-from django.contrib.auth.models import AbstractUser
-
-
-class ExtendedUser(models.Model):
-    user = models.OneToOneField(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    created = models.DateTimeField(auto_now_add=True)
-    phone_number = models.CharField(max_length=13, blank=True)
 
 
 class Profile(models.Model):

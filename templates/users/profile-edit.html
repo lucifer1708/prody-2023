@@ -67,7 +67,7 @@
             </div>
             <div class="grid-65">
               <select name="gender" class="form-select mb-0" id="gender" aria-label="Gender select example">
-                <option selected>Gender</option>
+                <option selected>Select Gender</option>
                 {% for key, value in profile.GENDER_CHOICES %}
                 <option value="{{ key }}" {% if profile.gender == key %}selected{% endif %}>{{ value }}</option>
                 {% endfor %}
@@ -102,8 +102,6 @@
             </div>
           </fieldset>
           <fieldset>
-            <!-- <input type="button" class="Btn cancel" value="Cancel" /> -->
-            <!-- <input type="submit" class="Btn" value="Save Changes" /> -->
             <input type="submit" value="Save Profile" class="Btn"></input>
           </fieldset>
 
