@@ -17,6 +17,34 @@
 
   <div class="wrapper">
     {% include 'includes/navbar.html' %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+
+
+        <div class="login-wrap p-0">
+          <div class="messages">
+            {% if messages %}
+            <div style="color: white; text-align:center; font-size: 1.2em; margin-top:10px;">
+              {% for message in messages %}
+
+              <div class="alert alert-success shadow-lg">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span> <h3><strong>{{message}}</strong></h3></span>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+
     <div class="profile">
       <div class="content">
         <h1>Edit Profile</h1>
@@ -67,7 +95,6 @@
             </div>
             <div class="grid-65">
               <select name="gender" class="form-select mb-0" id="gender" aria-label="Gender select example">
-                <option selected>Select Gender</option>
                 {% for key, value in profile.GENDER_CHOICES %}
                 <option value="{{ key }}" {% if profile.gender == key %}selected{% endif %}>{{ value }}</option>
                 {% endfor %}
