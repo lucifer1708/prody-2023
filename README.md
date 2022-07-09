@@ -49,6 +49,14 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
+### Alternative:
+
+```bash
+docker-compose up
+```
+and navigate to localhost:8000
+
+
 ## Roadmap :earth_asia:
 
 - Adding signup login stuff (:heavy_check_mark:)
