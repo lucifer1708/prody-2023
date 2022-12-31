@@ -19,6 +19,7 @@ def event_reg(request):
 class EventList(generic.ListView):
     model = EventCard
     template_name = 'events/event.html'
+    context_object_name = "eventcard_list"
 
 
 class SponsorsList(generic.ListView):
