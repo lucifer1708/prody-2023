@@ -1,0 +1,88 @@
+<section id='welcome'>
+
+    <div id='left'>PRODY</div>
+    <span id='Of'></span>
+    <div id='right'>OGIKI</div>
+</section>
+
+
+
+
+<style>
+    *{
+	box-sizing: border-box;
+    font-family:sans-serif;
+	margin: 0;
+	padding: 0;
+	transition:all 1s;
+}
+body{
+	background: #666;
+	color:#999;
+}
+#welcome{
+  color:#555;
+  text-shadow:0 1px 3px white,
+              -10px 0 8px black;
+	display:flex;
+	height: 100%;
+	min-height:100vh;
+	min-width: 100vw;
+	overflow: hidden;
+	position: fixed;
+	width:100%;
+    z-index: 10;
+}
+#welcome div:hover{
+  text-shadow:0 0 1px white,
+              0 0 0 black;
+}
+#welcome div{
+	align-items:center;
+	background:#333;
+	box-shadow: 0 0 100px black;
+	cursor:pointer;
+	display:flex;
+    font-size:7em;
+	font-weight:bold;
+	width:50%;
+}
+#left{
+	justify-content:flex-end;
+}
+#right{
+	justify-content: flex-start!important;
+}
+.Of{
+	justify-content:flex-end;
+	width:0!important;
+	visibility: hidden;
+}
+#Of{
+	width: 0;
+}
+.On{
+	width: 100%!important;
+}
+
+</style>
+
+<script>
+    var divs = document.getElementById('welcome');
+ divs = divs.getElementsByTagName('div');
+ 
+ for (var i = 0; i < divs.length; i++) {
+   divs[i].onclick = splitScreen;
+ }
+ 
+ function splitScreen() {
+   document.getElementById('welcome').style.visibility = 'hidden';
+   var split = document.getElementById('Of');
+   if (true) {
+      split.className = 'On';
+      divs[0].className = 'Of';
+      divs[1].className = 'Of';
+   }
+ }
+ </script>
+ 
