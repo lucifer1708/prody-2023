@@ -1,0 +1,79 @@
+<footer>
+    
+    <ul id="socials" class="flex-container">
+        <li><a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+    </ul>
+</footer>
+
+<style>
+    footer{
+        padding: 1.7% 2.5%;
+        background: linear-gradient(rgba(1,1,1,.5), rgba(2,2,2,.5))
+    }
+    .flex-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    #socials{
+        font-size: 0.6rem;
+        position: relative;
+        display: flex;
+    }
+    #socials li{
+        position: relative;
+        list-style: none;
+        margin: 0 20px;
+        cursor: pointer;
+    }
+    #socials li a{
+        text-decoration: none;
+    }
+    #socials li a .fa-brands {
+        font-size: 6em;
+        color: rgb(175, 175, 175);
+    }
+    #socials li::before{
+        font-family: "FontAwesome";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 6em;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+    #socials li:nth-child(1)::before{
+        content: "\f16d";
+        background-image: linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-bottom: 4px solid #dc2743;
+    }
+    #socials li:nth-child(2)::before{
+        content: "\f232";  /*Yeah jo code hai na yeah fontawesome waali site par mil jaata jaaha se icon ka code copy karte*/
+        color: #25D366;
+        border-bottom: 4px solid #25D366;
+    }
+    #socials li:nth-child(3)::before{
+        content: "\f099";
+        color: #1DA1F2;
+        border-bottom: 4px solid #1DA1F2;
+    }
+    #socials li:hover::before{
+        top: -13.8px;
+        height: 130%;
+    }
+    #socials li:hover .fa-brands{
+        opacity: 0;
+        animation: pulse 1s 1;
+    }
+    
+
+
+</style>
