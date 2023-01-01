@@ -3,8 +3,10 @@
 Home
 {% endblock %}
 {% block home %}
+
+{% include "users/opening.html" %}  <!--hehe-->
+{% include "users/glitch_text_style.html" %}
 {% include 'includes/navbar.html' %}
-{% include "./glitch_text_style.html" %}
 {% if user.is_authenticated %}
 
 <style>
